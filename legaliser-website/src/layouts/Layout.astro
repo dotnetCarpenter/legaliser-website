@@ -1,4 +1,6 @@
 ---
+import "../style/base.css";
+
 interface Props {
 	title: string;
 	description: string;
@@ -21,38 +23,3 @@ const { title, description } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style is:global>
-	@font-face {
-		font-family: "Gill sans extra bold condensed";
-		src: url("/font/gill_sans_extra_condensed_bold.woff2") format("woff2"),
-			url("/font/gill_sans_extra_condensed_bold.woff") format("woff");
-	}
-
-	/* :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	} */
-	html {
-		font-family: "Gill sans extra bold condensed", system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	p {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
