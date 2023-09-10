@@ -36,7 +36,7 @@ html {
     background: var(--theme-background);
     background-size: 224px;
 }
-main {
+.main {
     width: 800px;
     max-width: calc(100% - 2rem);
 
