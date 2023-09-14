@@ -3,8 +3,8 @@
     src: url("/font/gill_sans_extra_condensed_bold.woff2") format("woff2"),
         url("/font/gill_sans_extra_condensed_bold.woff") format("woff");
 }
-
-/* :root {
+/*
+:root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
@@ -14,7 +14,12 @@
         rgb(var(--accent-light)) 30%,
         white 60%
     );
-} */
+}*/
+
+@custom-media --viewport-mobile (max-width: 400px);
+@custom-media --viewport-tablet (min-width: 401px);
+@custom-media --viewport-desktop (min-width: 1024px);
+
 :root {
     --theme-dark-background: #13151a;
     --theme-dark-color: white;
@@ -32,7 +37,11 @@
     }
 }
 html {
+    color: var(--theme-color);
     font-family: "Gill sans extra bold condensed", system-ui, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+
     background: var(--theme-background);
     background-size: 224px;
 }
@@ -42,10 +51,6 @@ html {
 
     margin: auto;
     padding: 1rem;
-
-    color: var(--theme-color);
-    font-size: 20px;
-    line-height: 1.6;
 }
 p {
     font-family:

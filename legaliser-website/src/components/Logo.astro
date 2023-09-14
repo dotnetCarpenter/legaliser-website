@@ -2,8 +2,8 @@
 <style>
 	.logo {
 		position: fixed;
-		top: 10vh;
-		min-width: 70vw;
+		top: 20vh;
+		min-width: 60vw;
         max-height: 86vh;
 
 		left: 50%;
@@ -12,4 +12,14 @@
 		opacity: 0.4;
 		z-index: -1;
 	}
+	@media (--viewport-desktop) {
+		.logo {
+			top: 5vh;
+		}
+	}
+	/* @media screen and (min-width: 640px) {
+		.logo {
+			top: -1rem;
+		}
+	} */
 </style>
