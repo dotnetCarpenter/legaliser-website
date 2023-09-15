@@ -6,13 +6,14 @@ interface Props {
 	title: string;
 	description: string;
 	keywords: string;
+	lang: string;
 }
 
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, lang } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="da">
+<html lang={lang}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content={description} />

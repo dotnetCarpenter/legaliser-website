@@ -1,20 +1,12 @@
+/* fonts */
+
 @font-face {
     font-family: "Gill sans extra bold condensed";
     src: url("/font/gill_sans_extra_condensed_bold.woff2") format("woff2"),
         url("/font/gill_sans_extra_condensed_bold.woff") format("woff");
 }
-/*
-:root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-    );
-}*/
+
+/* variables */
 
 @custom-media --viewport-mobile (max-width: 400px);
 @custom-media --viewport-tablet (min-width: 401px);
@@ -36,6 +28,21 @@
         --theme-color: var(--theme-dark-color);
     }
 }
+
+/* reset */
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
 html {
     color: var(--theme-color);
     font-family: "Gill sans extra bold condensed", system-ui, sans-serif;
@@ -54,6 +61,20 @@ main {
     margin-block: 1em;
     padding-inline: 1em;
 }
+h1 {
+    margin: 0;
+
+    font-family: "Gill sans extra bold condensed";
+    font-size: 7em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+h2 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
 p {
     font-family:
         Menlo,
@@ -64,4 +85,19 @@ p {
         Bitstream Vera Sans Mono,
         Courier New,
         monospace;
+}
+
+.legaliser-heading {
+    text-indent: -5000rem;
+    background: url("/legaliser.svg") no-repeat center;
+}
+@media (--viewport-mobile) {
+    .legaliser-heading {
+        margin-block-start: -0.3em;
+    }
+}
+@media (--viewport-tablet) {
+    .legaliser-heading {
+        margin-bottom: 5vw;
+    }
 }

@@ -1,4 +1,8 @@
 <nav>
+    { Astro.url.pathname.indexOf ("english") > -1
+        ? <a href="/" title="Manifest på dansk">Dansk</a>
+        : <a href="/english/" title="Manifest in English">English</a>
+    }
     <a href="https://www.facebook.com/groups/166678173130376/" title="Facebook Group" target="_blank">
         <!-- Facebook -->
         <svg
@@ -13,7 +17,8 @@
 <style>
 	nav {
         display: flex;
-        flex-direction: row-reverse;
         justify-content: space-between;
 	}
+    .h-5 { height: 1.25rem; }
+    .w-5 { width: 1.25rem; }
 </style>
