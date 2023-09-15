@@ -72,8 +72,9 @@ h1 {
 }
 h2 {
     font-size: 1.4em;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
 }
 p {
     font-family:
