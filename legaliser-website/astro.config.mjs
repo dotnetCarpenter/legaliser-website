@@ -1,5 +1,8 @@
 import { defineConfig } from 'astro/config';
+import sitemap from "@astrojs/sitemap";
 
-export default defineConfig ({
-    site: 'https://legaliser.dk'
+// https://astro.build/config
+export default defineConfig({
+  site: 'https://legaliser.dk',
+  integrations: [sitemap()]
 });
