@@ -1,10 +1,15 @@
 <nav>
     { Astro.url.pathname.indexOf ("english") === -1
-        ? <a href="/english/" title="Manifest in English">English</a>
-        : <a href="/" title="Manifest på dansk">Dansk</a>
+        ?
+            <a href="/english/" title="Manifest in English">English</a>
+            <a class="attention-text" href="https://dukop.dk/da/event/aktionsmde-for-demo-af-legalisering-af-cannabis/5607/" title="Dukop.dk" target="_blank">Aktionsmøde</a>
+        :
+            <a href="/" title="Manifest på dansk">Dansk</a>
+            <a class="attention-text" href="https://dukop.dk/da/event/aktionsmde-for-demo-af-legalisering-af-cannabis/5607/" title="Dukop.dk" target="_blank">Activist Meeting</a>
     }
+    
     <a href="https://www.facebook.com/legalisertilfolketnu" title="Facebook" target="_blank">
-        <!-- Facebook -->
+    <!-- Facebook -->
         <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -16,14 +21,30 @@
 </nav>
 <style>
 	nav {
+        --text-shadow: 0 0 2px #fff;
+
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
+        line-height: 1.6em;
 
         padding-block-start: 0.3em;
         padding-inline: 0.3em;
 
         border-bottom: 1px var(--theme-color) solid;
 	}
+    a { letter-spacing: 0em; }
+
+    .attention-text {
+        font-size: 1.2em;
+        animation: alternate forwards infinite 1s ease-in-out text-growth;
+    }
+
     .h-5 { height: 1.25rem; }
     .w-5 { width: 1.25rem; }
+
+    @keyframes text-growth {
+        60% { text-shadow: initial; }
+        to { text-shadow: var(--text-shadow); }
+    }
 </style>
