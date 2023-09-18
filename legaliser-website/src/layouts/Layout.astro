@@ -27,6 +27,7 @@ const socialImageURL = new URL("/logo.svg", Astro.url);
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="canonical" href={canonicalURL} />
 
 		<!-- Facebook Meta Tags -->
 		<meta property="og:url" content={canonicalURL}>
