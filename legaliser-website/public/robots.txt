@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://legaliser.dk/sitemap-index.xml
