@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import Card from "../components/Card.astro";
+import { Image } from "astro:assets";
+import imgRoute from "../image/demorute.png";
+import imgMarios from "../image/marios_orozco.jpg";
+import imgNanna from "../image/nanna_gotfredsen.jpg";
+import imgHuda from "../image/huda_alkabani.jpg";
+import imgAlex from "../image/alexander_ryle.jpg";
+import imgAnders from "../image/anders_stjernholm.jpg";
+---
+
+<Layout
+	title="LEGALISER"
+	description="Legalisering er den eneste løsning! KOM TIL FOLKEDEMO LØRDAG D. 30 SEPTEMBER KL 12 fra Den Grå Hal"
+	keywords="legaliser cannabis, Pusher Street, Christiania, afkriminalisere cannabis, bandekriminalitet, positivt hashmarkedet"
+	lang="da">
+	<main class="main">
+		<Logo/>
+		<h1 class="legaliser-heading">LEGALISÉR</h1>
+		<article aria-label="pressepakke">
+			<article aria-label="formål">
+				<h2>Pressepakke</h2>
+				<p>1 milliard ekstra til velfærd - hvert år!</p>
+				<h3>Demoens formål</h3>
+				<p>Vi vil skabe en åben debat omkring legalisering og regulering af cannabis. Sammen med et bredt spektre fra dansk politik, går vi sammen til Christiansborg, lørdag den 30. september kl. 12.</p>
+				<p>70 års forbudspolitik mod cannabis har hverken mindsket danskernes forbrug eller svækket det ulovlige marked. Vi har i år været vidne til mord og eksplosioner, fra bander som har en kæmpe økonomisk gevinst ved at sælge cannabis i Danmark. Dobbelt straf og visitationszoner ændrer hverken forbrug eller det illegale marked.</p>
+				<p>Op mod halvdelen af landets befolkning har stiftet bekendtskab med cannabis i løbet af deres liv. Uden at man hverken kan få det analyseret eller vide sig sikker på hvad det indeholder.</p>
+				<p>Der er ligeledes en betydelig efterspørgsel som ikke vil forsvinde. Konsekvensen er retsforfølgelse af de danske borgere. Cannabis sælges i dag på et ulovligt marked, som alene varetages af den kriminelle underverden og er med til at finansiere bandekriminalitet. Vi vil have ordnede og lovlige forhold for sælgere og købere.</p>
+				<p>Vi tror på, at legalisering er den eneste vej frem, så overskuddet fra salget kan styrke vores velfærdsstat. I stedet for at tvinge kommunerne til at spare på velfærden, burde det 3 milliarder kroners, danske cannabis marked, beskattes på lige fod med andre danske virksomheder.</p>
+				<p>Lad os sammen tage ansvar!</p>
+				<p><strong>Vores talsperson er Marios Orozco</strong></p>
+			</article>
+			<article arial-label="rute og tider">
+				<h2>Tidsplan & demorute</h2>
+				<ul class="list">
+					<li><time datetime="2023-09-30 12:00">12:00</time><span class="location">Den Grå Hal, Christiania</span></li>
+					<li><time datetime="2023-09-30 13:00">13:00</time><span class="location">Afgang fra Den Grå Hal</span></li>
+					<li>
+						<time datetime="2023-09-30 13:45">Cirka 13:45</time><span class="location">Mindeankeret</span>
+						<ul class="sub-list"><li>Taler:<span class="speaker">Alexander Adam Ryle</span></li></ul>
+					</li>
+					<li><time datetime="2023-09-30 14:30">Cirka 14:30</time><span class="location">Nørreport</span></li>
+					<li>
+						<time datetime="2023-09-30 15:00">Cirka 15:00</time><span class="location">Byretten</span>
+						<ul class="sub-list"><li>Taler:<span class="speaker">Anders Stjernholm</span></li></ul>
+					</li>
+					<li>
+						<time datetime="2023-09-30 16:00">16:00</time><span class="location">Ankomst til Christiansborg Slotsplads</span>
+						<ul class="sub-list">
+							<li>Talere:<span class="speaker">Anne-Marie Helger</span></li>
+							<li><span style="visibility: hidden;">Talere:</span><span class="speaker">Nanna Gotfredsen</span></li>
+						</ul>
+					</li>
+				</ul>
+				<Image class="image" src={imgRoute} alt="Billede af vores demorute fra Christiania til Christiansborg." />
+			</article>
+			<article arial-label="Profilering">
+				<h2>Profilering</h2>
+				<ul class="link-card-grid">
+					<Card
+						title="Marios Orozco (talsperson)">
+						<Image
+							class="image"
+							src={imgMarios}
+							alt="Billede af legalisers talsperson, Marios Orozco."/>
+						<tel>42 66 99 80</tel>
+						<a href="mailto:presse@legaliser.dk">presse@legaliser.dk</a>
+						<span class="quote">Citat:</span>
+						<quote>Denne demo er ikke kun for folk som bruger cannabis, den er også for folk der er trætte at det kæmpe ressourcespild, der er i bekæmpelsen af denne relative harmløse plante</quote>
+						<quote>Vi håber at denne her demonstration kan vise hvor mange mennesker der har den fælles interesse i at regulere den her plante. Så børn ikke kan få adgang til cannabis og man har styr på både styrke og kvalitet, ligesom man har det med alkohol og tobak. Cannabis skal ikke forhandles af lyssky individer i underverden og skal beskattes som andre varer. Vi så gerne at pengene går til velfærd for psykisk syge og kommunerne. De milliarder som går til kriminelle kan gå til de danske kommuner.</quote>
+					</Card>
+					<Card
+						title="Marios Orozco (talsperson)">
+						<Image
+							class="image"
+							src={imgHuda}
+							alt="Billede af legalisers talsperson, Marios Orozco."/>
+						<tel>42 66 99 80</tel>
+						<a href="mailto:presse@legaliser.dk">presse@legaliser.dk</a>
+						<span class="quote">Citat:</span>
+						<quote>Denne demo er ikke kun for folk som bruger cannabis, den er også for folk der er trætte at det kæmpe ressourcespild, der er i bekæmpelsen af denne relative harmløse plante</quote>
+						<quote>Vi håber at denne her demonstration kan vise hvor mange mennesker der har den fælles interesse i at regulere den her plante. Så børn ikke kan få adgang til cannabis og man har styr på både styrke og kvalitet, ligesom man har det med alkohol og tobak. Cannabis skal ikke forhandles af lyssky individer i underverden og skal beskattes som andre varer. Vi så gerne at pengene går til velfærd for psykisk syge og kommunerne. De milliarder som går til kriminelle kan gå til de danske kommuner.</quote>
+					</Card>
+				</ul>
+			</article>
+		</article>
+	</main>
+</Layout>
+<style>
+	ul {
+		list-style-type: none;
+	}
+	.list {
+		padding-inline-start: 0;
+	}
+	.location::before {
+		margin-inline: .1em;
+		content: " - ";
+	}
+	.speaker {
+		margin-inline-start: 1em;
+	}
+	.image {
+		max-width: 100%;
+		height: auto;
+		border-radius: .15em;
+		filter: grayscale(100%);
+		transition: 500ms filter;
+	}
+	.image:is(:hover, :focus-within) {
+		filter: grayscale(0%);
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
