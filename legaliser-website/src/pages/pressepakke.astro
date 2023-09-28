@@ -4,11 +4,75 @@ import Logo from "../components/Logo.astro";
 import Card from "../components/Card.astro";
 import { Image } from "astro:assets";
 import imgRoute from "../image/demorute.png";
+
 import imgMarios from "../image/marios_orozco.jpg";
-import imgNanna from "../image/nanna_gotfredsen.jpg";
 import imgHuda from "../image/huda_alkabani.jpg";
+import imgAnders from "../image/anders_stjernholm.jpg"; 
 import imgAlex from "../image/alexander_ryle.jpg";
-import imgAnders from "../image/anders_stjernholm.jpg";
+import imgNanna from "../image/nanna_gotfredsen.jpg";
+
+const speakers = [
+	{
+		title: "Marios Orozco (talsperson)",
+		description: "Talsperson for demonstrationen Legaliser",
+		image: {
+			src: imgMarios,
+			alt: "Talsperson for demonstrationen Legaliser"
+		},
+		tel: "42 66 99 80",
+		email: "presse@legaliser.dk",
+		quotes: [
+			"Denne demo er ikke kun for folk som bruger cannabis, den er også for folk der er trætte at det kæmpe ressourcespild, der er i bekæmpelsen af denne relative harmløse plante.",
+			"Vi håber at denne her demonstration kan vise hvor mange mennesker der har den fælles interesse i at regulere den her plante. Så børn ikke kan få adgang til cannabis og man har styr på både styrke og kvalitet, ligesom man har det med alkohol og tobak. Cannabis skal ikke forhandles af lyssky individer i underverden og skal beskattes som andre varer. Vi så gerne at pengene går til velfærd for psykisk syge og kommunerne. De milliarder som går til kriminelle, kan gå til de danske kommuner."
+		]
+	}, {
+		title: "Huda Alkabani",
+		description: "CEO Generalens Hampa",
+		image: {
+			src: imgHuda,
+		},
+		tel: "81 22 41 08",
+		email: "hudalkabani@gmail.com",
+		quotes: [
+			"Vi burde have ret til at få analyseret cannabis. I en tilfældig prøve fandt vi 14 giftstoffer. Det kan ikke være rigtigt, at man på Vesterbro får oplyst i fixerum og af sundhedsarbejdere, når der er et farligt stof i omløb, mens man som cannabis bruger i Danmark, aldrig får at vide når der er farlig hash."
+		]
+	}, {
+		title: "Nanna Gotfredsen",
+		description: "Politiker, MF, Moderaterne",
+		image: {
+			src: imgNanna,
+		},
+		tel: "33 37 58 35",
+		email: "nanna.gotfredsen@ft.dk",
+		quotes: [
+			"Vi kan elske cannabis, vi kan hade cannabis, vi kan være ligeglade med cannabis, cannabis er fløjtende ligeglad, den er her, den bliver her og det er så det vi skal forholde os til. Forbudspolitikken har slået fejl, med enorme skadevirkninger til følge.",
+			"Jeg er ligeglad om det bliver rødt eller blåt, bare det bliver godt."
+		]
+	}, {
+		title: "Anders Stjernholm",
+		description: "Komiker, Politiker, Alternativet",
+		image: {
+			src: imgAnders,
+		},
+		tel: "29 72 34 70",
+		email: null,
+		quotes: [
+			"At vi ikke har fået en legalisering endnu, er et tegn på åndelig fattigdom. At politikerne har glemt både hvad liberalisme og socialisme betyder.",
+			"Legalisering vil gavne kriminologisk, folkesundhedsmæssigt, økonomisk, rettighedsmæssigt og ligheden. Det er en no brainer - så at SMV-regeringen ikke er på, undre mig."
+		]
+	}, {
+		title: "Alexander Adam Ryle",
+		description: "Politiker, MF, Liberal Alliance",
+		image: {
+			src: imgAlex,
+		},
+		tel: "61 62 49 83",
+		email: "alexander.ryle@ft.dk",
+		quotes: [
+			"Kaster man et blik på lande såsom Canada og Portugal, hvor man har legaliseret cannabis, viste det sig nemlig, at det ledte til markant mindre narkorelateret kriminalitet og førte til mange færre gadekonflikter og voldelige opgør over territorier. Noget tyder altså på, at en legalisering af cannabis også vil bidrage til at skabe mere tryghed og sikkerhed."
+		]
+	},
+];
 ---
 
 <Layout
@@ -19,8 +83,8 @@ import imgAnders from "../image/anders_stjernholm.jpg";
 	<main class="main">
 		<Logo/>
 		<h1 class="legaliser-heading">LEGALISÉR</h1>
-		<article aria-label="pressepakke">
-			<article aria-label="formål">
+		<article aria-label="Pressepakke">
+			<article aria-label="Formål">
 				<h2>Pressepakke</h2>
 				<p>1 milliard ekstra til velfærd - hvert år!</p>
 				<h3>Demoens formål</h3>
@@ -32,7 +96,25 @@ import imgAnders from "../image/anders_stjernholm.jpg";
 				<p>Lad os sammen tage ansvar!</p>
 				<p><strong>Vores talsperson er Marios Orozco</strong></p>
 			</article>
-			<article arial-label="rute og tider">
+			<article arial-label="Profilering">
+				<h2>Profilering</h2>
+				<ul class="card-grid">
+					{speakers.map (speaker => (
+						<Card
+							title={speaker.title}
+							description={speaker.description}
+							email={speaker.email}
+							tel={speaker.tel}
+							quotes={speaker.quotes}>
+							<Image
+								src={speaker.image.src}
+								alt={speaker.description}
+								class="link-card-image image" />
+						</Card>
+					))}
+				</ul>
+			</article>
+			<article arial-label="Rute og tider">
 				<h2>Tidsplan & demorute</h2>
 				<ul class="list">
 					<li><time datetime="2023-09-30 12:00">12:00</time><span class="location">Den Grå Hal, Christiania</span></li>
@@ -55,35 +137,6 @@ import imgAnders from "../image/anders_stjernholm.jpg";
 					</li>
 				</ul>
 				<Image class="image" src={imgRoute} alt="Billede af vores demorute fra Christiania til Christiansborg." />
-			</article>
-			<article arial-label="Profilering">
-				<h2>Profilering</h2>
-				<ul class="link-card-grid">
-					<Card
-						title="Marios Orozco (talsperson)">
-						<Image
-							class="image"
-							src={imgMarios}
-							alt="Billede af legalisers talsperson, Marios Orozco."/>
-						<tel>42 66 99 80</tel>
-						<a href="mailto:presse@legaliser.dk">presse@legaliser.dk</a>
-						<span class="quote">Citat:</span>
-						<quote>Denne demo er ikke kun for folk som bruger cannabis, den er også for folk der er trætte at det kæmpe ressourcespild, der er i bekæmpelsen af denne relative harmløse plante</quote>
-						<quote>Vi håber at denne her demonstration kan vise hvor mange mennesker der har den fælles interesse i at regulere den her plante. Så børn ikke kan få adgang til cannabis og man har styr på både styrke og kvalitet, ligesom man har det med alkohol og tobak. Cannabis skal ikke forhandles af lyssky individer i underverden og skal beskattes som andre varer. Vi så gerne at pengene går til velfærd for psykisk syge og kommunerne. De milliarder som går til kriminelle kan gå til de danske kommuner.</quote>
-					</Card>
-					<Card
-						title="Marios Orozco (talsperson)">
-						<Image
-							class="image"
-							src={imgHuda}
-							alt="Billede af legalisers talsperson, Marios Orozco."/>
-						<tel>42 66 99 80</tel>
-						<a href="mailto:presse@legaliser.dk">presse@legaliser.dk</a>
-						<span class="quote">Citat:</span>
-						<quote>Denne demo er ikke kun for folk som bruger cannabis, den er også for folk der er trætte at det kæmpe ressourcespild, der er i bekæmpelsen af denne relative harmløse plante</quote>
-						<quote>Vi håber at denne her demonstration kan vise hvor mange mennesker der har den fælles interesse i at regulere den her plante. Så børn ikke kan få adgang til cannabis og man har styr på både styrke og kvalitet, ligesom man har det med alkohol og tobak. Cannabis skal ikke forhandles af lyssky individer i underverden og skal beskattes som andre varer. Vi så gerne at pengene går til velfærd for psykisk syge og kommunerne. De milliarder som går til kriminelle kan gå til de danske kommuner.</quote>
-					</Card>
-				</ul>
 			</article>
 		</article>
 	</main>
@@ -111,11 +164,5 @@ import imgAnders from "../image/anders_stjernholm.jpg";
 	}
 	.image:is(:hover, :focus-within) {
 		filter: grayscale(0%);
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
 	}
 </style>
