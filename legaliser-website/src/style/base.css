@@ -113,7 +113,7 @@ p {
 }
 @media (--viewport-mobile) {
     .legaliser-heading {
-        margin-block-start: -0.3em;
+        margin-block-start: -0.2em;
     }
 }
 @media (--viewport-tablet) {
@@ -177,8 +177,4 @@ p {
     
 .card q {
     margin-top: 0.5rem;
-}
-
-.programAndRoute {
-
 }

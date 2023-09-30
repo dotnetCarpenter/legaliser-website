@@ -115,8 +115,8 @@ const speakers = [
 				</ul>
 			</article>
 			<article arial-label="Rute og tider">
+				<h2>Tidsplan & demorute</h2>
 				<div class="programAndRoute">
-					<h2>Tidsplan & demorute</h2>
 					<ul class="list">
 						<li><time datetime="2023-09-30 12:00">12:00</time><span class="location">Den Grå Hal, Christiania</span></li>
 						<li><time datetime="2023-09-30 13:00">13:00</time><span class="location">Afgang fra Den Grå Hal</span></li>
@@ -144,10 +144,18 @@ const speakers = [
 	</main>
 </Layout>
 <style>
+	.programAndRoute {
+	    
+	}
+	.programAndRoute .image {
+		margin-top: .5em;
+
+	}
 	ul {
 		list-style-type: none;
 	}
 	.list {
+		margin-top: .5em;
 		padding-inline-start: 0;
 	}
 	.location::before {
