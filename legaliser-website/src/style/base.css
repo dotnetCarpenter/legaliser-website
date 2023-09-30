@@ -14,17 +14,21 @@
 
 :root {
     --theme-dark-background: #13151a;
+    --theme-dark-background-darker: #23262d;
     --theme-dark-color: white;
     --theme-light-background: #e5f7da;
+    --theme-light-background-darker: #cbcfc9;
     --theme-light-color: black;
 
     /* default theme */
     --theme-background: var(--theme-light-background);
+    --theme-background-accent: var(--theme-light-background-darker);
     --theme-color: var(--theme-light-color);
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --theme-background: var(--theme-dark-background);
+        --theme-background-accent: var(--theme-dark-background-darker);
         --theme-color: var(--theme-dark-color);
     }
 }
@@ -132,13 +136,13 @@ p {
 .card {
     padding: 1em;
 
-    background-color: #23262d;
+    background-color: var(--theme-background-accent);
     background-position: 100%;
     border-radius: .15em;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 
     letter-spacing: .2ch;
-    
+
     list-style: none;
 }
 @media (--viewport-tablet) {
@@ -166,7 +170,7 @@ p {
 
     font-size: 1.25rem;
 }
-.card p, 
+.card p,
 .card q
 {
     display: inline-block;
@@ -174,7 +178,7 @@ p {
 
     font-weight: 200;
 }
-    
+
 .card q {
     margin-top: 0.5rem;
 }
