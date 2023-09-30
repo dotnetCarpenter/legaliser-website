@@ -7,24 +7,14 @@ interface Props {
 	quotes: string[];
 }
 
-const { title, description, tel, email } = Astro.props;
-const altText = `Billede af ${description}, ${title}.`
+const { title, description, tel, email, quotes } = Astro.props;
 ---
 
-<li class="link-card">
+<li class="card">
 	<h2>{title}</h2>
 	<slot></slot>
+	<div><span>{description}</span></div>
 	{ tel && <div><span>Tlf: </span><tel>{tel}</tel></div> }
 	{ email && <div><span>Email: </span><a href="mailto:{email}">{email}</a></div> }
+	{ quotes.map (q => <q>{q}</q>) }
 </li>
-<style>
-	/*.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}*/
-	quote::before { content:"“"; }
-	quote::after { content:"”"; }
-</style>
