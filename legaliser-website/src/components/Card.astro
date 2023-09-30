@@ -1,0 +1,20 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	tel?: string;
+	email?: string;
+	quotes: string[];
+}
+
+const { title, description, tel, email, quotes } = Astro.props;
+---
+
+<li class="card">
+	<h2>{title}</h2>
+	<slot></slot>
+	<div><span>{description}</span></div>
+	{ tel && <div><span>Tlf: </span><tel>{tel}</tel></div> }
+	{ email && <div><span>Email: </span><a href="mailto:{email}">{email}</a></div> }
+	{ quotes.map (q => <q>{q}</q>) }
+</li>
